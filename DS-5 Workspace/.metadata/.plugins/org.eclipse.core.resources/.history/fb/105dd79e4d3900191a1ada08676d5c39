@@ -1,0 +1,49 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 24, 2019
+ *      Author: Hyun Jun Kim
+ */
+
+#include <stdio.h>
+#include <string.h>
+#include "wifi.h"
+
+int main()
+{
+	Init_WiFi();
+	// allow time for dongle to lock onto baud rate
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+
+	printf("starting up...\n");
+/*
+// WiFi Twilio
+	char sendtxt[] = "dofile(\"send_text_message.lua\")\r\n"; // { 'd', 'o', 'f',... }
+	char checkwifi[] = "check_wifi()\r\n";
+	char shopallist[] = "send_sms(\"(778) 949-5030\",\"(778) 999-9041\",\"Here's your Shopal list: Apple, Banana, Bread\")\r\n";
+	//"Here's your Shopal list: Apple, Banana, Bread"
+	printf("testing twilio:\n");
+	talk_to_wifi(sendtxt);
+	delay(2000);
+	printf("sent text!\n");
+	talk_to_wifi(checkwifi);
+	delay(5000);
+	talk_to_wifi(shopallist);
+	delay(5000);
+	printf("wifi accessed!\n");
+*/
+
+// WiFi Database
+	char *database[500];
+	int size;
+	int j = 0;
+	size = pull_database(database);
+	for (j = 0; j < 10; j++) printf("%s\n", database[j]);
+
+
+	return 0;
+}

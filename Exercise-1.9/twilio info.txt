@@ -1,0 +1,11 @@
+TWILIO
+
+User Settings:		US3058ad333770f74a3a5e44009cc598ae
+for account loss: 	eFBmeQ4voezgVgVJnvbrZt/BORSwrquFREXig0ct
+
+ACCOUNT SID:		AC16705da024de2ef2dc7630f405557d89
+AUTH TOKEN:		b164d3bb00c41eda2ce6a5a2264629b0
+
+Twilio number:		(778) 949-5030
+My number: 		(778) 999-9041
+SID:			PN667a0324cdd91c17dffea1663be725b6

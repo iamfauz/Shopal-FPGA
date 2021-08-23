@@ -1,0 +1,5 @@
+ConnectionManager.savedConnections=<?xml version\="1.0" encoding\="UTF-8"?>\n<connections>\n\t<connection current\="yes" mode\="debug" type\="com.arm.debugger.launcher2">Shopal_Config</connection>\n</connections>\n
+PreferredTargetHasBeenSet=true
+UXContextManager.savedContexts=<?xml version\="1.0" encoding\="UTF-8"?>\n<contexts>\n\t<context color\="8388608">Connection|o03mj8ls\:1e8b05egzb6zv|1551122220148|workspace\:\:Shopal_Config|Shopal_Config</context>\n</contexts>\n
+com.arm.debugger.ux.scripts.favorites.new=script.file.tag\=D\:\\altera\\15.0\\embedded\\ds-5\\sw\\debugger\\configdb\\Scripts\\altera_target_check.py\nscript.verbose.tag\=false\n
+eclipse.preferences.version=1

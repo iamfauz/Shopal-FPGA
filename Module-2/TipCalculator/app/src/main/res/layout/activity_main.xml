@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:inputType="numberDecimal"
+                android:text="Total Bill"
+                android:textColor="@color/colorNasuPurple"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/total_bill"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Total Bill"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+                    android:text="Tip (%)"
+                    android:textColor="@color/colorNasuPurple"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:id="@+id/tip"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+
+                        android:textColor="?attr/editTextColor"
+                        android:background="?attr/editTextBackground"
+                        android:gravity="center_vertical"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        />
+                    <Button
+                        android:id="@+id/minus_tip"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorBlueBell"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    <Button
+                        android:id="@+id/add_tip"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorBlueBell"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginLeft="5dp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Split Billl"
+                    android:textColor="@color/colorNasuPurple"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/split_bill"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="?attr/editTextColor"
+                        android:background="?attr/editTextBackground"
+                        android:gravity="center_vertical"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+                    <Button
+                        android:id="@+id/minus_split"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorBlueBell"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    <Button
+                        android:id="@+id/add_split"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorBlueBell"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginLeft="5dp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--This View serves as a visual divider between list items-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#dadada"
+                android:layout_marginTop="15dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Total Pay"
+                    android:textColor="@color/colorNasuPurple"
+                    android:textSize="15sp" />
+            <TextView
+                android:id="@+id/total_pay"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+
+                android:textAlignment="center"
+                android:textColor="?attr/editTextColor"
+                android:background="?attr/editTextBackground"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:layout_marginLeft="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Total Tip"
+                    android:textColor="@color/colorNasuPurple"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/total_tip"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+
+                    android:textAlignment="center"
+                    android:textColor="?attr/editTextColor"
+                    android:background="?attr/editTextBackground"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Total Per Person"
+                    android:textColor="@color/colorNasuPurple"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/total_per_person"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+
+                    android:textAlignment="center"
+                    android:textColor="?attr/editTextColor"
+                    android:background="?attr/editTextBackground"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

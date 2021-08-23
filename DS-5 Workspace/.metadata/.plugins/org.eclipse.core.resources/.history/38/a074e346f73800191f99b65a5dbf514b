@@ -1,0 +1,120 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 24, 2019
+ *      Author: Hyun Jun Kim
+ */
+
+#include <stdio.h>
+#include <string.h>
+#include "wifi.h"
+
+int main()
+{
+	Init_WiFi();
+	WiFiFlush();
+	// allow time for dongle to lock onto baud rate
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+	talk_to_wifi("\r\n");
+
+	printf("starting up...\n");
+/*
+// WiFi Twilio
+	char sendtxt[] = "dofile(\"send_text_message.lua\")\r\n"; // { 'd', 'o', 'f',... }
+	char checkwifi[] = "check_wifi()\r\n";
+	char shopallist[] = "send_sms(\"(778) 949-5030\",\"(778) 999-9041\",\"Here's your Shopal list: Apple, Banana, Bread\")\r\n";
+	//"Here's your Shopal list: Apple, Banana, Bread"
+	printf("testing twilio:\n");
+	talk_to_wifi(sendtxt);
+	delay(2000);
+	printf("sent text!\n");
+	talk_to_wifi(checkwifi);
+	delay(5000);
+	talk_to_wifi(shopallist);
+	delay(5000);
+	printf("wifi accessed!\n");
+*/
+
+// WiFi Database
+	char database[] = "dofile(\"firebase.lua\")\r\n";
+	char get_db[] = "get_db()\r\n";		// updates the .json file in the flash mem of WiFi chip
+	char print_db[] = "print_db()\r\n";		// this will print out the actual data from the WiFi chip
+	char make_db[] = "make_db()\r\n";
+	// test fn
+	char print_test1[] = "print_test1()\r\n";
+	char print_test2[] = "print_test2()\r\n";
+	//char print_test3[] = "print_test3()\r\n";
+	//char print_test4[] = "print_test4()\r\n";
+	//int i = 0;
+	//char *c = (char *) malloc(500*sizeof(char));
+	char c[500] = NULL;
+	char d[500] = NULL;
+	char e[500] = NULL;
+//	char c[15];
+//	char d[15];
+//	char e[15];
+
+	printf("testing database: \n");
+	talk_to_wifi(database);
+
+
+//	while (i < 3) {		// doesn't happen right away usually. Attempt three times
+//		talk_to_wifi(get_db);
+//		delay(1000);
+//	}
+	talk_to_wifi(get_db);
+	talk_to_wifi(get_db);
+	talk_to_wifi(get_db);
+
+	talk_to_wifi(make_db);
+
+	talk_receive_wifi(print_db,c);
+	printf("\n");
+	printf(c);
+	printf("\neof");
+
+	talk_receive_wifi(print_db,c);
+	printf("\n");
+	printf(c);
+	printf("\neof");
+
+	talk_receive_wifi(print_db,c);
+	printf("\n");
+	printf(c);
+	printf("\neof");
+
+	talk_receive_wifi(print_db,c);
+	printf("\n");
+	printf(c);
+	printf("\neof");
+//	talk_receive_wifi(print_test1, c);
+//	printf("\n");
+//	printf(c);
+//	printf("\neof");
+//
+//	talk_receive_wifi(print_test2, c);
+//	printf("\n");
+//	printf(c);
+//	printf("\neof");
+
+//	talk_receive_wifi(print_test3, c);
+//	printf("\n");
+//	printf(c);
+//	printf("\neof");
+//
+//	talk_receive_wifi(print_test4, c);
+//	printf("\n");
+//	printf(c);
+//	printf("\neof");
+
+
+
+
+
+
+
+	return 0;
+}

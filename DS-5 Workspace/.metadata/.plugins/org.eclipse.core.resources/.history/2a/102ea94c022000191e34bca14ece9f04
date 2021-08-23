@@ -1,0 +1,25 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 24, 2019
+ *      Author: Hyun Jun Kim
+ */
+#include <stdio.h>
+//#include "RS232Port.h"
+
+//enable semihosting
+//int __auto_semihosting;
+
+int main()
+{
+	printf("testing:    ");
+	/*int a,b,c;
+	a = 2;
+
+	b=putcharRS232(a);
+	c = getcharRS232();
+
+	printf("getchar should be %d : %d", b,c);
+*/
+	return 0;
+}
